@@ -2,6 +2,8 @@
 """This module starts a Flask web application that will be served
    in 'http://0.0.0.0:5000/'"""
 
+from flask import Flask, render_template
+
 from flask import Flask
 
 app = Flask(__name__)
