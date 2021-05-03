@@ -24,7 +24,7 @@ def show_c_var(text):
     """display C followed by the value of the text variable and
     replace underscore _ symbols with a space"""
     str_without_sym = text.replace('_', ' ')
-    return '%s' % str_without_sym
+    return 'C %s' % str_without_sym
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0")
