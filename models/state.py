@@ -4,6 +4,7 @@ from models.base_model import BaseModel, Base
 from sqlalchemy import Column, Integer, String, ForeignKey
 from sqlalchemy.orm import relationship
 from models.engine.file_storage import FileStorage
+from models.engine.db_storage import DBStorage
 from os import getenv
 
 
@@ -17,7 +18,8 @@ class State(BaseModel, Base):
         @property
         def cities(self):
             """
-            Return the list of City objects from storage linked to the current State
+            Return the list of City objects from
+            storage linked to the current State
             """
             list_city = {}
             dictionary = models.storage.all(City)
